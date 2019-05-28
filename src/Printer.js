@@ -51,6 +51,7 @@ class PdfPrinter {
 			userPassword: docDefinition.userPassword,
 			ownerPassword: docDefinition.ownerPassword,
 			permissions: docDefinition.permissions,
+			pageBoxes: docDefinition.pageBoxes || {},
 			fontLayoutCache: isBoolean(options.fontLayoutCache) ? options.fontLayoutCache : true,
 			bufferPages: options.bufferPages || false,
 			autoFirstPage: false,
