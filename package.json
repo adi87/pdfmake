@@ -1,6 +1,6 @@
 {
   "name": "pdfmake",
-  "version": "0.2.0-alpha.0",
+  "version": "0.2.1",
   "description": "Client/server side PDF printing in pure JavaScript",
   "main": "src/index.js",
   "browser": "build/pdfmake.js",
@@ -8,9 +8,10 @@
     "test": "tests"
   },
   "dependencies": {
+    "core-js": "3",
     "iconv-lite": "^0.4.24",
     "linebreak": "^0.3.0",
-    "pdfkit": "^0.9.1"
+    "pdfkit": "git+https://github.com/adi87/pdfkit#0.9.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

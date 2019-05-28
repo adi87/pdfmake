@@ -21,8 +21,13 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
+			core: path.join(__dirname, 'core'),
 			fs: path.join(__dirname, './src/browser-extensions/virtual-fs.js')
-		}
+		},
+		extensions: [
+			'.ts',
+			'.js' // add this
+		]
 	},
 	node: {
 		// Prevent webpack from injecting setImmediate polyfill, which includes a "new Function" through a global polyfill - which cannot be used in a CSP environment with sane defaults
@@ -45,6 +50,7 @@ module.exports = {
 										"ie": "11"
 									},
 									modules: false,
+									corejs: "3",
 									useBuiltIns: 'usage',
 									loose: true
 								}
@@ -82,6 +88,7 @@ module.exports = {
 										"ie": "11"
 									},
 									modules: false,
+									corejs: "3",
 									useBuiltIns: 'usage',
 									loose: true
 								}
